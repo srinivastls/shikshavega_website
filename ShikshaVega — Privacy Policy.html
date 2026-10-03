@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Privacy Policy — ShikshaVega by Soir Software Solutions</title>
+  <meta name="description" content="Privacy Policy for ShikshaVega School ERP app by Soir Software Solutions. Learn how we collect, use and protect your data."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:        #0f0f1a;
+      --surface:   #16162a;
+      --surface2:  #1e1e35;
+      --border:    rgba(255,255,255,0.07);
+      --saffron:   #FF9933;
+      --gold:      #FFD166;
+      --green:     #06D6A0;
+      --white:     #F4F4FF;
+      --muted:     #8888AA;
+      --radius:    14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15,15,26,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(20px, 5vw, 80px);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #FF9933, #FF6B00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .logo-text span { color: var(--gold); }
+
+    .topbar-sub {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 72px);
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,153,51,0.08) 0%, transparent 70%);
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--saffron);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--saffron);
+      border-radius: 2px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .meta-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .meta-chip .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--saffron);
+      flex-shrink: 0;
+    }
+
+    .meta-chip strong { color: var(--white); }
+
+    /* ── LAYOUT ── */
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 0;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      padding: 48px 24px 48px 0;
+      border-right: 1px solid var(--border);
+      position: sticky;
+      top: 64px;
+      height: calc(100vh - 64px);
+      overflow-y: auto;
+    }
+
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      padding-left: 12px;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-list a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+      line-height: 1.4;
+    }
+
+    .nav-list a:hover {
+      background: var(--surface2);
+      color: var(--white);
+    }
+
+    .nav-list a.active {
+      background: rgba(255,153,51,0.12);
+      color: var(--saffron);
+      font-weight: 500;
+    }
+
+    /* ── CONTENT ── */
+    .content {
+      padding: clamp(32px, 4vw, 64px) clamp(20px, 4vw, 64px);
+      max-width: 740px;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 56px;
+      scroll-margin-top: 88px;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--saffron);
+      opacity: 0.7;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      color: var(--white);
+    }
+
+    .section p {
+      color: #C0C0D8;
+      margin-bottom: 14px;
+      max-width: 65ch;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── INFO BOX ── */
+    .infobox {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--saffron);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .infobox.green { border-left-color: var(--green); }
+    .infobox.gold  { border-left-color: var(--gold); }
+
+    .infobox p {
+      font-size: 14px;
+      color: #B8B8D4;
+      margin: 0;
+    }
+
+    .infobox strong { color: var(--white); }
+
+    /* ── DATA TABLE ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--surface2);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 8px 0 0; }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #C0C0D8;
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+    /* ── LIST ── */
+    .policy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .policy-list li {
+      display: flex;
+      gap: 12px;
+      color: #C0C0D8;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .policy-list li::before {
+      content: '→';
+      color: var(--saffron);
+      flex-shrink: 0;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+
+    /* ── RIGHTS GRID ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .right-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .right-card .icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .right-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .right-card p {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(255,153,51,0.12), rgba(255,209,102,0.06));
+      border: 1px solid rgba(255,153,51,0.25);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-top: 20px;
+    }
+
+    .contact-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #C0C0D8;
+    }
+
+    .contact-row:last-child { margin-bottom: 0; }
+
+    .contact-row .label {
+      color: var(--saffron);
+      font-weight: 600;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .contact-row a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .contact-row a:hover { text-decoration: underline; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: clamp(32px, 4vw, 48px) clamp(20px, 5vw, 80px);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-brand {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .footer-brand span { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .tricolor {
+      display: flex;
+      height: 4px;
+      border-radius: 2px;
+      overflow: hidden;
+      width: 120px;
+    }
+
+    .tricolor div { flex: 1; }
+    .tricolor .s { background: #FF9933; }
+    .tricolor .w { background: #ffffff; }
+    .tricolor .g { background: #138808; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+
+      .content {
+        padding: 32px 20px;
+      }
+
+      .hero {
+        padding: 48px 20px 40px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <a class="logo" href="#">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <div class="logo-text">Shiksha<span>Vega</span></div>
+      </div>
+    </a>
+    <span class="topbar-sub">Soir Software Solutions</span>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label">Legal</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p style="color:#8888AA; max-width:560px; font-size:16px; line-height:1.7;">
+      We believe your data belongs to you. This policy explains exactly what we collect,
+      why we collect it, and how we keep it safe — in plain language, not legal jargon.
+    </p>
+    <div class="hero-meta">
+      <div class="meta-chip"><div class="dot"></div>Effective: <strong>01 January 2025</strong></div>
+      <div class="meta-chip"><div class="dot"></div>Last updated: <strong>01 January 2025</strong></div>
+      <div class="meta-chip"><div class="dot"></div>Applies to: <strong>ShikshaVega App & Website</strong></div>
+    </div>
+  </section>
+
+  <!-- LAYOUT -->
+  <div class="layout" style="padding-left: clamp(20px, 5vw, 80px); padding-right: clamp(20px, 5vw, 80px);">
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+      <div class="sidebar-title">Contents</div>
+      <ul class="nav-list">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#who-we-are">Who We Are</a></li>
+        <li><a href="#data-we-collect">Data We Collect</a></li>
+        <li><a href="#how-we-use">How We Use Your Data</a></li>
+        <li><a href="#data-sharing">Data Sharing</a></li>
+        <li><a href="#data-storage">Storage & Security</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#your-rights">Your Rights</a></li>
+        <li><a href="#cookies">Cookies & Tracking</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#changes">Policy Changes</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- OVERVIEW -->
+      <section class="section" id="overview">
+        <div class="section-number">Section 01</div>
+        <h2>Overview</h2>
+        <div class="infobox">
+          <p>
+            <strong>Short version:</strong> ShikshaVega collects only the data needed to run your school.
+            We do not sell your data. We do not show ads. Your school's data is yours.
+          </p>
+        </div>
+        <p>
+          This Privacy Policy applies to the ShikshaVega mobile application (Android), the ShikshaVega
+          web portal, and all related services provided by Soir Software Solutions ("we", "us", "our").
+          By using ShikshaVega, you agree to the practices described in this policy.
+        </p>
+        <p>
+          ShikshaVega serves multiple types of users — School Administrators, Teachers, Students, and
+          Parents/Guardians. This policy covers data collected from all these roles.
+        </p>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- WHO WE ARE -->
+      <section class="section" id="who-we-are">
+        <div class="section-number">Section 02</div>
+        <h2>Who We Are</h2>
+        <p>
+          ShikshaVega is a School ERP product developed and operated by
+          <strong>Soir Software Solutions</strong>, a software company registered in India.
+        </p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Company Name</td><td>Soir Software Solutions</td></tr>
+            <tr><td>Product</td><td>ShikshaVega — School Management ERP</td></tr>
+            <tr><td>Country</td><td>India</td></tr>
+            <tr><td>Email</td><td>privacy@soirsoftware.com</td></tr>
+            <tr><td>Website</td><td>www.shikshavega.com</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- DATA WE COLLECT -->
+      <section class="section" id="data-we-collect">
+        <div class="section-number">Section 03</div>
+        <h2>Data We Collect</h2>
+        <p>
+          We collect different types of data depending on your role in the app.
+          Here is a full breakdown:
+        </p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Examples</th>
+              <th>Who it applies to</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Identity Data</strong></td>
+              <td>Name, date of birth, profile photo, gender</td>
+              <td>All users</td>
+            </tr>
+            <tr>
+              <td><strong>Contact Data</strong></td>
+              <td>Mobile number, email address, home address</td>
+              <td>Admin, Teachers, Parents</td>
+            </tr>
+            <tr>
+              <td><strong>Academic Data</strong></td>
+              <td>Attendance records, exam marks, report cards, homework submissions</td>
+              <td>Students, Teachers</td>
+            </tr>
+            <tr>
+              <td><strong>Financial Data</strong></td>
+              <td>Fee payment history, receipts, outstanding dues</td>
+              <td>Parents, Admin</td>
+            </tr>
+            <tr>
+              <td><strong>Device Data</strong></td>
+              <td>Device model, OS version, push notification token</td>
+              <td>All users (app)</td>
+            </tr>
+            <tr>
+              <td><strong>Usage Data</strong></td>
+              <td>Login timestamps, features used, session duration</td>
+              <td>All users</td>
+            </tr>
+            <tr>
+              <td><strong>Location Data</strong></td>
+              <td>GPS location (only for school transport / bus tracking module)</td>
+              <td>Transport users only</td>
+            </tr>
+            <tr>
+              <td><strong>Communication Data</strong></td>
+              <td>Messages sent within the app, notice content</td>
+              <td>Teachers, Admin, Parents</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="infobox green">
+          <p>
+            <strong>We never collect:</strong> Aadhaar numbers, bank account details, passwords
+            in plain text, or any biometric data. Payment processing is handled by
+            certified third-party gateways — we never see your card or bank details.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- HOW WE USE -->
+      <section class="section" id="how-we-use">
+        <div class="section-number">Section 04</div>
+        <h2>How We Use Your Data</h2>
+        <p>We use your data only to provide and improve the ShikshaVega service. Specifically:</p>
+        <ul class="policy-list">
+          <li>To create and manage your account on ShikshaVega</li>
+          <li>To provide core ERP features — attendance, fees, grades, timetable, notices</li>
+          <li>To send important school notifications via push alerts, SMS, or WhatsApp</li>
+          <li>To process fee payments and generate receipts</li>
+          <li>To generate academic reports and report cards for students</li>
+          <li>To enable school-to-parent communication through the app</li>
+          <li>To provide customer support when you contact us</li>
+          <li>To detect, prevent, and address technical issues or abuse</li>
+          <li>To improve app performance and user experience based on usage patterns</li>
+          <li>To comply with applicable Indian laws and regulations</li>
+        </ul>
+        <div class="infobox gold">
+          <p>
+            <strong>We do not use your data for advertising.</strong> ShikshaVega is a paid B2B
+            SaaS platform — we have no reason or incentive to monetise your data.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- DATA SHARING -->
+      <section class="section" id="data-sharing">
+        <div class="section-number">Section 05</div>
+        <h2>Data Sharing</h2>
+        <p>
+          We do not sell, rent, or trade your personal information to any third party.
+          We share data only in the following limited situations:
+        </p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Who we share with</th>
+              <th>Why</th>
+              <th>Safeguards</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Your School</strong></td>
+              <td>Your school administration manages your account and data within their institution</td>
+              <td>Role-based access control</td>
+            </tr>
+            <tr>
+              <td><strong>Cloud Infrastructure</strong><br/>(AWS / Google Cloud)</td>
+              <td>Hosting, storage, and database services</td>
+              <td>Data processing agreements in place</td>
+            </tr>
+            <tr>
+              <td><strong>Payment Gateways</strong><br/>(Razorpay / PayU)</td>
+              <td>Processing online fee payments</td>
+              <td>PCI-DSS certified, no card data stored by us</td>
+            </tr>
+            <tr>
+              <td><strong>SMS / WhatsApp Providers</strong></td>
+              <td>Delivering notifications and alerts to parents</td>
+              <td>Only phone number shared, contractually bound</td>
+            </tr>
+            <tr>
+              <td><strong>Legal Authorities</strong></td>
+              <td>When required by Indian law, court order, or government directive</td>
+              <td>Only minimum data legally required</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- DATA STORAGE -->
+      <section class="section" id="data-storage">
+        <div class="section-number">Section 06</div>
+        <h2>Storage &amp; Security</h2>
+        <p>
+          All ShikshaVega data is stored on secure cloud servers located in India.
+          We implement the following security measures:
+        </p>
+        <ul class="policy-list">
+          <li>All data in transit is encrypted using TLS 1.2 or higher (HTTPS everywhere)</li>
+          <li>All data at rest is encrypted using AES-256 encryption</li>
+          <li>Passwords are hashed using bcrypt — we cannot see your password</li>
+          <li>Role-based access control — users only see data relevant to their role</li>
+          <li>Regular automated backups with point-in-time recovery</li>
+          <li>Two-factor authentication (2FA) available for Admin accounts</li>
+          <li>Security audits and penetration testing conducted periodically</li>
+          <li>Strict internal access controls — only authorized Soir engineers can access infrastructure</li>
+        </ul>
+        <div class="infobox">
+          <p>
+            <strong>Data residency:</strong> Your school's data is stored in servers located within
+            India, in compliance with applicable Indian data protection regulations.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- CHILDREN -->
+      <section class="section" id="children">
+        <div class="section-number">Section 07</div>
+        <h2>Children's Privacy</h2>
+        <p>
+          ShikshaVega is used in schools and therefore processes data of students who may be
+          under 18 years of age. We take this responsibility seriously:
+        </p>
+        <ul class="policy-list">
+          <li>Student accounts are created and managed by the school, not directly by the student</li>
+          <li>Parents and guardians are linked to student accounts and receive all notifications</li>
+          <li>Students under 13 do not interact directly with the platform without guardian involvement</li>
+          <li>We collect only the minimum data necessary for academic management of each student</li>
+          <li>Student data is never used for advertising, profiling, or shared outside the school context</li>
+          <li>Schools (as data controllers) are responsible for obtaining appropriate consent from parents</li>
+        </ul>
+        <div class="infobox green">
+          <p>
+            <strong>Parents:</strong> You have the right to request access to, correction of, or
+            deletion of your child's data by contacting your school's administrator or emailing us
+            directly at <strong>privacy@soirsoftware.com</strong>.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- YOUR RIGHTS -->
+      <section class="section" id="your-rights">
+        <div class="section-number">Section 08</div>
+        <h2>Your Rights</h2>
+        <p>
+          Under India's Digital Personal Data Protection Act (DPDPA) 2023 and general
+          best practices, you have the following rights:
+        </p>
+        <div class="rights-grid">
+          <div class="right-card">
+            <div class="icon">👁️</div>
+            <h4>Right to Access</h4>
+            <p>Request a copy of all personal data we hold about you</p>
+          </div>
+          <div class="right-card">
+            <div class="icon">✏️</div>
+            <h4>Right to Correct</h4>
+            <p>Request correction of inaccurate or incomplete data</p>
+          </div>
+          <div class="right-card">
+            <div class="icon">🗑️</div>
+            <h4>Right to Erase</h4>
+            <p>Request deletion of your data when no longer needed</p>
+          </div>
+          <div class="right-card">
+            <div class="icon">📦</div>
+            <h4>Right to Portability</h4>
+            <p>Receive your data in a machine-readable format</p>
+          </div>
+          <div class="right-card">
+            <div class="icon">🚫</div>
+            <h4>Right to Object</h4>
+            <p>Object to processing of your data in certain situations</p>
+          </div>
+          <div class="right-card">
+            <div class="icon">📩</div>
+            <h4>Right to Complain</h4>
+            <p>Lodge a complaint with us or the relevant data authority</p>
+          </div>
+        </div>
+        <p style="margin-top:16px">
+          To exercise any of these rights, contact us at
+          <a href="mailto:privacy@soirsoftware.com" style="color:var(--gold)">privacy@soirsoftware.com</a>.
+          We will respond within <strong>30 days</strong>. Note that some rights may be limited
+          where data is required by your school for legitimate academic or legal purposes.
+        </p>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- COOKIES -->
+      <section class="section" id="cookies">
+        <div class="section-number">Section 09</div>
+        <h2>Cookies &amp; Tracking</h2>
+        <p>
+          The ShikshaVega web portal uses a minimal set of cookies. The app does not use
+          advertising trackers or third-party analytics SDKs that profile users.
+        </p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Cookie Type</th>
+              <th>Purpose</th>
+              <th>Can you opt out?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Session Cookies</strong></td>
+              <td>Keep you logged in during your session</td>
+              <td>No — required for the app to work</td>
+            </tr>
+            <tr>
+              <td><strong>Preference Cookies</strong></td>
+              <td>Remember your language, theme, and settings</td>
+              <td>Yes — clear browser cookies</td>
+            </tr>
+            <tr>
+              <td><strong>Analytics Cookies</strong></td>
+              <td>Understand how pages are used (no personal identifiers)</td>
+              <td>Yes — via browser settings</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="infobox">
+          <p>
+            We do <strong>not</strong> use Facebook Pixel, Google Ads tracking, or any
+            cross-site advertising cookies on ShikshaVega.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- THIRD PARTY -->
+      <section class="section" id="third-party">
+        <div class="section-number">Section 10</div>
+        <h2>Third-Party Services</h2>
+        <p>ShikshaVega integrates with a small number of trusted third-party services:</p>
+        <ul class="policy-list">
+          <li><strong>Firebase (Google)</strong> — Push notifications to the mobile app</li>
+          <li><strong>Razorpay / PayU</strong> — Online fee payment processing (PCI-DSS certified)</li>
+          <li><strong>Twilio / MSG91</strong> — SMS alerts sent to parents and staff</li>
+          <li><strong>Google Maps</strong> — Transport route display and bus tracking</li>
+          <li><strong>AWS S3</strong> — Secure storage of uploaded documents and photos</li>
+        </ul>
+        <p>
+          Each of these providers is contractually bound to process data only as directed by us
+          and in accordance with applicable privacy laws. Links to the ShikshaVega website or
+          app may lead to third-party websites — we are not responsible for their privacy practices.
+        </p>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- RETENTION -->
+      <section class="section" id="retention">
+        <div class="section-number">Section 11</div>
+        <h2>Data Retention</h2>
+        <p>We retain your data for as long as your school's account is active with ShikshaVega.</p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Retention Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Student academic records</td>
+              <td>For the duration of enrollment + 3 years after leaving the school</td>
+            </tr>
+            <tr>
+              <td>Fee payment records</td>
+              <td>7 years (as required by Indian financial regulations)</td>
+            </tr>
+            <tr>
+              <td>Staff employment records</td>
+              <td>Duration of employment + 3 years</td>
+            </tr>
+            <tr>
+              <td>App usage logs</td>
+              <td>90 days, then automatically deleted</td>
+            </tr>
+            <tr>
+              <td>All school data after account closure</td>
+              <td>Deleted within 60 days of account termination (export available)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Schools can export all their data at any time from the Admin Dashboard.
+          Upon account termination, we provide a 30-day window to export before deletion.
+        </p>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- CHANGES -->
+      <section class="section" id="changes">
+        <div class="section-number">Section 12</div>
+        <h2>Policy Changes</h2>
+        <p>
+          We may update this Privacy Policy from time to time. When we do, we will:
+        </p>
+        <ul class="policy-list">
+          <li>Update the "Last updated" date at the top of this page</li>
+          <li>Notify School Administrators via email at least 14 days before significant changes take effect</li>
+          <li>Display an in-app banner for all users about material changes</li>
+          <li>Maintain an archive of previous versions available on request</li>
+        </ul>
+        <p>
+          Continued use of ShikshaVega after the effective date of any changes
+          constitutes your acceptance of the updated policy.
+        </p>
+      </section>
+
+      <hr class="divider"/>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-number">Section 13</div>
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions, concerns, or requests regarding this Privacy Policy
+          or how we handle your data, please reach out to us:
+        </p>
+        <div class="contact-card">
+          <h3>Soir Software Solutions — Privacy Team</h3>
+          <div class="contact-row">
+            <span class="label">Email</span>
+            <a href="mailto:privacy@soirsoftware.com">privacy@soirsoftware.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">Support</span>
+            <a href="mailto:support@soirsoftware.com">support@soirsoftware.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">Website</span>
+            <a href="https://www.shikshavega.com" target="_blank">www.shikshavega.com</a>
+          </div>
+          <div class="contact-row">
+            <span class="label">Response</span>
+            <span>We respond to all privacy requests within 30 business days</span>
+          </div>
+        </div>
+        <div class="infobox" style="margin-top:20px">
+          <p>
+            For complaints that remain unresolved, you may contact the
+            <strong>Data Protection Board of India</strong> once constituted under
+            the Digital Personal Data Protection Act, 2023.
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <div class="footer-brand">Shiksha<span>Vega</span> &nbsp;·&nbsp; <span style="color:var(--muted);font-weight:400;font-size:14px">Soir Software Solutions</span></div>
+      <div class="footer-copy">© 2025 Soir Software Solutions. All rights reserved.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+      <div class="tricolor"><div class="s"></div><div class="w"></div><div class="g"></div></div>
+      <div style="font-size:12px;color:var(--muted)">Made with ❤️ in Bharat 🇮🇳</div>
+    </div>
+  </footer>
+
+  <script>
+    // Active sidebar link on scroll
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav-list a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const active = document.querySelector(`.nav-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
